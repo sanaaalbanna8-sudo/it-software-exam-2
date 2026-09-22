@@ -32,15 +32,13 @@
       <div class="kicker">Formative quiz · MCQ + True/False</div>
       <h1>شو فهمت من درس البرمجيات؟</h1>
       <p class="lead">
-        امتحان تفاعلي يقيس فهمك لمواضيع
-        <a href="https://sanaaalbanna8-sudo.github.io/it-software/" target="_blank" rel="noopener">Computer software in an IT system</a>.
-        فيه مراجعة عامة، والوزن الأكبر للجزء بعد سؤال النقاش: ليش CLI؟ والأوامر، والأداء، وUtility، والتطبيقات، والمصدر المفتوح، وأنواع الملفات.
+        امتحان قصير عن برامج الحاسوب في نظام IT. فيه مراجعة عامة، والوزن الأكبر للجزء بعد سؤال النقاش: ليش CLI؟ والأوامر، والأداء، وبرامج المساعدة، والتطبيقات، والمصدر المفتوح، وأنواع الملفات.
       </p>
       <ul class="exam-meta">
         <li><strong>30 سؤال:</strong> اختيار من متعدد + صح وخطأ</li>
-        <li><strong>~¼ مراجعة عامة:</strong> نظام التشغيل والواجهات</li>
-        <li><strong>~¾ تركيز:</strong> CLI · أداء OS · Utility · Applications · Open source · Files</li>
-        <li>في النهاية تظهر الدرجة + تفصيل المحاور + مراجعة كل إجابة مع السبب</li>
+        <li><strong>بعد كل إجابة:</strong> يظهر فورًا إذا كانت صحيحة أو خاطئة، مع السبب</li>
+        <li><strong>التركيز الأكبر:</strong> CLI · أداء النظام · Utility · التطبيقات · التراخيص · الملفات</li>
+        <li>في النهاية تظهر الدرجة + تفصيل المحاور</li>
       </ul>
       <label class="exam-name" id="name-field">
         اسم الطالب <span class="req">*</span>
@@ -59,6 +57,7 @@
       <h2 id="q-title"></h2>
       <p class="exam-scene" id="q-scene"></p>
       <div class="exam-choices" id="q-choices"></div>
+      <p class="exam-feedback" id="q-feedback" hidden></p>
       <div class="exam-nav">
         <button class="icon-btn" id="q-prev" type="button">السابق</button>
         <button class="start" id="q-next" type="button">التالي</button>
@@ -86,6 +85,6 @@
     </section>
   </main>
 
-  <script src="js/exam.js?v=2"></script>
+  <script src="js/exam.js?v=3"></script>
 </body>
 </html>

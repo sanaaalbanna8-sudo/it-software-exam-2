@@ -303,20 +303,50 @@ h3 { font-size: 18px; }
   border-color: var(--auto);
   background: rgba(46, 233, 200, 0.12);
 }
+.exam-choice.is-correct {
+  border-color: var(--good);
+  background: rgba(61, 255, 176, 0.16);
+}
+.exam-choice.is-wrong {
+  border-color: var(--bad);
+  background: rgba(255, 93, 122, 0.16);
+}
+.exam-choice:disabled {
+  opacity: 1;
+  color: inherit;
+}
+.exam-choices.is-locked .exam-choice {
+  cursor: default;
+  transform: none;
+}
+.exam-choices.is-locked .exam-choice:hover {
+  transform: none;
+}
 .exam-choices.tf .exam-choice {
   text-align: center;
   font-size: 22px;
   font-weight: 900;
   min-height: 72px;
 }
-.exam-choices.tf .exam-choice:first-child.selected {
-  border-color: var(--good);
-  background: rgba(61, 255, 176, 0.14);
+.exam-feedback {
+  margin: 14px 0 0;
+  padding: 12px 14px;
+  border-radius: 14px;
+  font-weight: 800;
+  font-size: 15px;
+  line-height: 1.7;
 }
-.exam-choices.tf .exam-choice:last-child.selected {
-  border-color: var(--bad);
-  background: rgba(255, 93, 122, 0.14);
+.exam-feedback.ok {
+  background: rgba(61, 255, 176, 0.12);
+  color: var(--good);
+  border: 1px solid rgba(61, 255, 176, 0.28);
 }
+.exam-feedback.bad {
+  background: rgba(255, 93, 122, 0.12);
+  color: #ffc2cd;
+  border: 1px solid rgba(255, 93, 122, 0.28);
+}
+.exam-feedback strong { color: var(--ink); }
 .exam-nav {
   display: flex;
   justify-content: space-between;
