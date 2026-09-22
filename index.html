@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>امتحان · A4 Computer software</title>
+  <link rel="icon" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/exam.css" />
+</head>
+<body class="exam-page">
+  <div class="bg">
+    <div class="orb a"></div>
+    <div class="orb b"></div>
+    <div class="orb c"></div>
+  </div>
+
+  <header class="exam-top">
+    <div class="brand">
+      <span class="mark">A4</span>
+      <span>
+        <b>امتحان الفهم · Computer software</b>
+        <small>Unit 1 · IT Systems · تركيز الجزء الأخير</small>
+      </span>
+    </div>
+  </header>
+
+  <main class="exam-wrap">
+    <section class="exam-card" id="intro">
+      <div class="kicker">Formative quiz · MCQ + True/False</div>
+      <h1>شو فهمت من درس البرمجيات؟</h1>
+      <p class="lead">
+        امتحان تفاعلي يقيس فهمك لمواضيع
+        <a href="https://sanaaalbanna8-sudo.github.io/it-software/" target="_blank" rel="noopener">Computer software in an IT system</a>.
+        فيه مراجعة عامة، والوزن الأكبر للجزء بعد سؤال النقاش: ليش CLI؟ والأوامر، والأداء، وUtility، والتطبيقات، والمصدر المفتوح، وأنواع الملفات.
+      </p>
+      <ul class="exam-meta">
+        <li><strong>30 سؤال:</strong> اختيار من متعدد + صح وخطأ</li>
+        <li><strong>~¼ مراجعة عامة:</strong> نظام التشغيل والواجهات</li>
+        <li><strong>~¾ تركيز:</strong> CLI · أداء OS · Utility · Applications · Open source · Files</li>
+        <li>في النهاية تظهر الدرجة + تفصيل المحاور + مراجعة كل إجابة مع السبب</li>
+      </ul>
+      <label class="exam-name" id="name-field">
+        اسم الطالب <span class="req">*</span>
+        <input type="text" id="student-name" placeholder="اكتب اسمك الثلاثي…" autocomplete="name" required maxlength="80" />
+        <small class="name-hint" id="name-hint">الاسم إجباري قبل البدء</small>
+      </label>
+      <button class="start" id="start-exam" type="button">ابدأ الامتحان</button>
+    </section>
+
+    <section class="exam-card" id="quiz" hidden>
+      <div class="exam-progress">
+        <span id="q-count">1 / 30</span>
+        <div class="progress"><i id="exam-bar"></i></div>
+      </div>
+      <div class="exam-tag" id="q-tag"></div>
+      <h2 id="q-title"></h2>
+      <p class="exam-scene" id="q-scene"></p>
+      <div class="exam-choices" id="q-choices"></div>
+      <div class="exam-nav">
+        <button class="icon-btn" id="q-prev" type="button">السابق</button>
+        <button class="start" id="q-next" type="button">التالي</button>
+      </div>
+    </section>
+
+    <section class="exam-card" id="result" hidden>
+      <div class="kicker">Result</div>
+      <div class="score-ring" id="score-ring"><b id="final-score">0</b></div>
+      <h2 id="result-title">انتهى الامتحان</h2>
+      <p class="lead" id="result-msg"></p>
+      <p class="save-status" id="save-status" hidden></p>
+      <div class="exam-breakdown" id="breakdown"></div>
+
+      <div class="review-block">
+        <div class="kicker">Review</div>
+        <h2>مراجعة الإجابات</h2>
+        <p class="lead" style="margin-bottom:8px">كل سؤال مع إجابتك والصحيح والسبب.</p>
+        <div id="review-list"></div>
+      </div>
+
+      <div class="exam-nav" style="justify-content:center;margin-top:22px;gap:12px">
+        <button class="start" id="retry-btn" type="button">أعد المحاولة</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/exam.js"></script>
+</body>
+</html>
